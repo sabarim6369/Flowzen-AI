@@ -8,3 +8,9 @@ class TicketClassification(BaseModel):
     priority: str = Field(description="Low, Medium, High, Critical")
     department: str = Field(description="Responsible department")
     confidence: float = Field(description="0 to 1 confidence score")
+
+class TicketClassificationResponse(BaseModel):
+    description: str
+    category: str
+    priority: str
+    department: str
